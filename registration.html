@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Tobias Buhmann" />
+	<meta name="copyright" content="Tobias Buhmann" />
+	<meta name="keywords" content="Fachhochschule Vorarlberg, FHV, Studenten" />
+	<meta name="robots" content="index" />
+	<meta name="robots" content="max-image-preview:[medium]" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>FHV | Registrierung</title>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,cyrillic'
+		rel='stylesheet' type='text/css'>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<script src="js/main.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+	<header>
+		<div class="container">
+			<div class="head">
+				<div class="head-logo" id="logos">
+					<a href="index.html"><img src="images/logo.png" alt="fhv-logo"></a>
+					<a href="mailto:tobias.buhmann@students.fhv.at"><img src="images/email.png" alt="mail-logo"></a>
+				</div>
+
+				<div class="head-button">
+					<ul class="actions">
+						<li><a href="index.html" class="button">Anmelden</a></li>
+						<li><a href="registration.html" class="button">Registrieren</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section class="content">
+		<div class="container">
+			<div class="content-wrap">
+				<div>
+					<aside>
+						<div class="menu-box">
+							<h4>Registrierung</h4>
+							<nav>
+								<ul>
+								</ul>
+							</nav>
+						</div>
+					</aside>
+
+					<div class="content-info">
+						<div>
+							<form action="mailto:tobias.buhmann@students.fhv.at" name="registrierung" method="post"
+								onsubmit="return validateRegistration(); return checkCheckbox(); ">
+								<!-- Persönliche Daten -->
+								<div class="section-txt">
+									<h4>Persönliche Daten</h4>
+									<input type="radio" name="geschlecht" value="1" required>
+									<label for="geschlecht">männlich</label>
+									<input type="radio" name="geschlecht" value="2">
+									<label for="geschlecht">weiblich</label>
+									<input type="radio" name="geschlecht" value="3">
+									<label for="geschlecht">divers</label> <br>
+									<input type="text" name="vorname" placeholder="Vorname" />
+									<input type="text" name="nachname" placeholder="Nachname" />
+									<textarea name="adresse" placeholder="Adresse" rows="2"></textarea>
+									<br>
+									<select name="herkunftsland">
+										<option value="-1">- Herkunftsland -</option>
+										<option value="1">Österreich</option>
+										<option value="2">Schweiz</option>
+										<option value="3">Deutschland</option>
+										<option value="4">anderes</option>
+									</select>
+								</div>
+
+								<!-- User-Daten -->
+								<div>
+									<h4>User-Daten</h4>
+									<input type="checkbox" name="berechtigung" value="1" required>
+									<label for="berechtigung">Dozent</label>
+									<input type="checkbox" name="berechtigung" value="2">
+									<label for="berechtigung">Student</label>
+									<input type="checkbox" name="berechtigung" value="3">
+									<label for="berechtigung">Admin</label> <br>
+									<input type="text" name="userID" minlength="5" maxlength="8"
+										placeholder="User-ID" />
+									<input type="text" name="mail" placeholder="E-Mail" /> <br>
+									<input type="passwort" name="passwort" minlength="6" maxlength="9"
+										placeholder="Passwort" />
+									<input type="passwort" name="passwortBest" minlength="6" maxlength="9"
+										placeholder="Passwort bestätigen" />
+									<select name="studiengang">
+										<option value="-1">- Studiengang -</option>
+										<option value="1">Informatik - Software and Information Engineering</option>
+										<option value="2">Informatik - Digital Innovation</option>
+										<option value="3">Intermedia</option>
+										<option value="4">Mechatronik</option>
+									</select>
+									<select name="studienjahr" id="studienjahr">
+										<option value="-1">- Studienjahr -</option>
+										<option value="1">SS 2020</option>
+										<option value="2">WS 2020/21</option>
+										<option value="3">SS 2021</option>
+										<option value="4">WS 2021/22</option>
+									</select> <br>
+								</div>
+								<div class="forms-button">
+									<ul class="actions">
+										<li><input type="submit" value="Registrieren" /></li>
+										<li><input type="reset" value="Zurücksetzen" /></li>
+									</ul>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+	</section>
+</body>
+
+</html>
